@@ -1,0 +1,53 @@
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    min-width: 320px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	body {
+		padding-top: 120px;
+	}
+
+}
+
+
+#main {
+	min-width: 320px;
+}
+
+
+
+#header {
+	min-width: 320px;
+
+	> .container {
+		padding: 20px 15px;
+		> p {
+			margin: 0;
+		}
+	}
+
+}
+
+
+#footer {
+	min-width: 320px;
+	position: absolute;
+
+	> .container {
+		padding: 20px 15px;
+		> p {
+			margin: 0;
+		}
+	}
+
+}
+

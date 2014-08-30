@@ -1,0 +1,9 @@
+{
+	"name": "bootstrap-demo",
+	"version": "0.1.0",
+	"main": "Gruntfile.js",
+	"dependencies": {
+		"jquery": "~2.1.1",
+		"lodash": "~2.4.1"
+	}
+}
