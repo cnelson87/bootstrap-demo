@@ -10,7 +10,8 @@ module.exports = function (grunt) {
 
 		install: {
 			options: {
-				stripJsAffix: true
+				//add bootstrap manually
+				ignorePackages: ['bootstrap-sass-official']
 			},
 			dest: '<%= sourceVendor %>'
 		}

@@ -17,6 +17,7 @@ module.exports = function (grunt) {
 			src: [
 				'<%= sourceVendor %>/modernizr.custom.js',
 				'<%= sourceVendor %>/jquery.js',
+				'<%= sourceVendor %>/greensock.js',
 				'<%= sourceVendor %>/lodash.js',
 				'<%= sourceVendor %>/bootstrap.js'
 			],
@@ -27,6 +28,7 @@ module.exports = function (grunt) {
 			src: [
 				'<%= sourceVendor %>/modernizr.custom.js',
 				'<%= sourceVendor %>/jquery.js',
+				'<%= sourceVendor %>/greensock.js',
 				'<%= sourceVendor %>/lodash.js',
 				'<%= sourceVendor %>/bootstrap.js'
 			],
