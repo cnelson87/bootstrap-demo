@@ -13,6 +13,21 @@
 		padding-top: 10px;
 	}
 </style>
+<script>
+$(function() {
+	$('#DatePicker').datepicker({
+		autoclose: true,
+		todayHighlight: true
+	})
+	.on('show', function(e) {
+		console.log('show');
+	})
+	.on('hide', function(e) {
+		console.log('hide');
+	});
+
+});
+</script>
 </head>
 <body id="homepage">
 
@@ -31,20 +46,29 @@
 			<a class="btn btn-lg btn-primary" href="#"><span class="glyphicon glyphicon-star"></span> Primary C.T.A. &raquo;</a>
 		</div>
 
+		<div class="well well-lg">
+			<form role="form" class="form-inline">
+				<div class="form-group">
+					<label for="DatePicker">Date Picker</label>
+					<input type="text" id="DatePicker" class="form-control" />
+					<p class="help-block">Example of the Datepicker for Bootstrap plugin.</p>
+				</div>
+			</form>
+		</div>
 
 		<div class="row show-grid">
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
-			<div class="col-md-1">.col-md-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
+			<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1">.col-xs-4<br />.col-sm-3<br />.col-md-2<br />.col-lg-1</div>
 		</div>
 		<div class="row show-grid">
 			<div class="col-md-8">.col-md-8</div>

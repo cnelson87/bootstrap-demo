@@ -1,0 +1,13 @@
+
+/*
+	The btn.non-btn formats text to look like a button.
+	Use Case: When a component needs to "fit in" with other buttons but doesn't provide any functionality.
+*/
+.btn.non-btn {
+	cursor: default;
+	&:hover, &:focus, &:active, &.active {
+		background-color: transparent;
+		border-color: $btn-default-border;
+		box-shadow: none;
+	}
+}

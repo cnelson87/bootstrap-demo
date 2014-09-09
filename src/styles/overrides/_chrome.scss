@@ -10,13 +10,8 @@ body {
 }
 
 
-#main {
-	min-width: 320px;
-}
-
-
 #header {
-	min-width: 320px;
+	min-width: $screen-xs-min;
 
 	> .container {
 		padding: 20px 15px;
@@ -29,7 +24,7 @@ body {
 
 
 #footer {
-	min-width: 320px;
+	min-width: $screen-xs-min;
 	position: absolute;
 
 	> .container {
@@ -39,5 +34,10 @@ body {
 		}
 	}
 
+}
+
+
+#main {
+	min-width: $screen-xs-min;
 }
 

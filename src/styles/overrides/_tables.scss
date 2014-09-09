@@ -1,0 +1,16 @@
+
+// nested tables
+.table {
+	.nested-table-cell {
+		padding: 0;
+		> .table {
+			margin-bottom: 8px;
+			> tbody:first-child > tr:first-child {
+				> td {
+					border-top: 0;
+				}
+			}
+		}
+	}
+}
+
