@@ -11,11 +11,11 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 46.7%) !default; // #777
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$gray-darker:           #222 !default;
+$gray-dark:             #333 !default;
+$gray:                  #555 !default;
+$gray-light:            #777 !default;
+$gray-lighter:          #eee !default;
 
 $brand-primary:         #2a9fd6 !default;
 $brand-success:         #77b300 !default;
@@ -29,8 +29,7 @@ $brand-danger:          #cc0000 !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-//$body-bg:               #060606 !default;
-$body-bg:               #666 !default;
+$body-bg:               $gray-darker !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-light !default;
 
@@ -69,7 +68,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
 $headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
+$headings-line-height:    1.0 !default;
 $headings-color:          inherit !default;
 
 
@@ -375,7 +374,7 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light !default;
-$navbar-inverse-bg:                         #222 !default;
+$navbar-inverse-bg:                         #060606 !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
@@ -831,7 +830,7 @@ $pre-scrollable-max-height:   340px !default;
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
 //** Text muted color
-$text-muted:                  $gray-light !default;
+$text-muted:                  $gray !default;
 //** Abbreviations and acronyms border color
 $abbr-border-color:           $gray-light !default;
 //** Headings small color
