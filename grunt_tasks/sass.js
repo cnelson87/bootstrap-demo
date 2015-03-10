@@ -10,25 +10,27 @@ module.exports = function (grunt) {
 
 		dev: {
 			options: {
+				sourcemap: 'auto',
 				style: 'expanded',
 				debug: true,
 				trace: true
 			},
 			files: [{
 				src: '<%= sourceStyles %>/styles.scss',
-				dest: '<%= localStyles %>/<%= fileName %>.css'
+				dest: '<%= localStyles %>/<%= assetName %>.css'
 			}]
 		},
 
 		dist: {
 			options: {
-				style: 'compressed',
+				sourcemap: 'none',
+				style: 'expanded',
 				debug: false,
 				trace: false
 			},
 			files: [{
 				src: '<%= sourceStyles %>/styles.scss',
-				dest: '<%= publicStyles %>/<%= fileName %>.css'
+				dest: '<%= publicStyles %>/<%= assetName %>.css'
 			}]
 		}
 

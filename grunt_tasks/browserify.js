@@ -4,7 +4,7 @@
  * Grunt task for node-browserify.
  */
 
-var remapify		= require('remapify');
+var remapify = require('remapify');
 
 module.exports = function (grunt) {
 
@@ -12,106 +12,74 @@ module.exports = function (grunt) {
 
 		dev: {
 			src: '<%= sourceScripts %>/initialize.js',
-			dest: '<%= localScripts %>/<%= fileName %>.js',
+			dest: '<%= localScripts %>/<%= assetName %>.js',
 			options: {
-				preBundleCB: function (b) {
+				preBundleCB: function(b) {
 					b.plugin(remapify, [
+						{
+							cwd: './src/templates',
+							src: './**/*.hbs',
+							expose: 'templates'
+						},
 						{
 							cwd: './src/scripts/config',
 							src: './**/*.*',
 							expose: 'config'
 						},
 						{
-							cwd: './src/scripts/events',
+							cwd: './src/scripts/utilities',
 							src: './**/*.*',
-							expose: 'events'
-						},
-						{
-							cwd: './src/scripts/utils',
-							src: './**/*.*',
-							expose: 'utils'
-						},
-						{
-							cwd: './src/scripts/collections',
-							src: './**/*.*',
-							expose: 'collections'
-						},
-						{
-							cwd: './src/scripts/models',
-							src: './**/*.*',
-							expose: 'models'
-						},
-						{
-							cwd: './src/scripts/views',
-							src: './**/*.*',
-							expose: 'views'
+							expose: 'utilities'
 						},
 						{
 							cwd: './src/scripts/widgets',
 							src: './**/*.*',
 							expose: 'widgets'
-						},
-						{
-							cwd: './src/templates',
-							src: './**/*.*',
-							expose: 'templates'
 						}
 					]);
 				},
 				transform: ['browserify-handlebars'],
+				browserifyOptions: {
+					extensions: ['.hbs'],
+					fullPaths: false
+				},
 				debug: true
 			}
 		},
 
 		dist: {
 			src: '<%= sourceScripts %>/initialize.js',
-			dest: '<%= publicScripts %>/<%= fileName %>.js',
+			dest: '<%= publicScripts %>/<%= assetName %>.js',
 			options: {
-				preBundleCB: function (b) {
+				preBundleCB: function(b) {
 					b.plugin(remapify, [
+						{
+							cwd: './src/templates',
+							src: './**/*.hbs',
+							expose: 'templates'
+						},
 						{
 							cwd: './src/scripts/config',
 							src: './**/*.*',
 							expose: 'config'
 						},
 						{
-							cwd: './src/scripts/events',
+							cwd: './src/scripts/utilities',
 							src: './**/*.*',
-							expose: 'events'
-						},
-						{
-							cwd: './src/scripts/utils',
-							src: './**/*.*',
-							expose: 'utils'
-						},
-						{
-							cwd: './src/scripts/collections',
-							src: './**/*.*',
-							expose: 'collections'
-						},
-						{
-							cwd: './src/scripts/models',
-							src: './**/*.*',
-							expose: 'models'
-						},
-						{
-							cwd: './src/scripts/views',
-							src: './**/*.*',
-							expose: 'views'
+							expose: 'utilities'
 						},
 						{
 							cwd: './src/scripts/widgets',
 							src: './**/*.*',
 							expose: 'widgets'
-						},
-						{
-							cwd: './src/templates',
-							src: './**/*.*',
-							expose: 'templates'
 						}
 					]);
 				},
 				transform: ['browserify-handlebars'],
+				browserifyOptions: {
+					extensions: ['.hbs'],
+					fullPaths: false
+				},
 				debug: false
 			}
 		}

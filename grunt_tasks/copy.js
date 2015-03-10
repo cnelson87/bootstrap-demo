@@ -8,6 +8,15 @@ module.exports = function (grunt) {
 
 	return {
 
+		data: {
+			files: [{
+				cwd: '<%= sourceData %>',
+				src: '**/*.json',
+				dest: '<%= localData %>',
+				expand: true
+			}]
+		},
+
 		images: {
 			files: [{
 				cwd: '<%= sourceImages %>',

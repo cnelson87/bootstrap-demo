@@ -10,16 +10,15 @@ module.exports = function (grunt) {
 
 		options: {
 			separator: '\n;\n'
-			//separator: '\n\n'
 		},
 
 		dev: {
 			src: [
-				'<%= sourceVendor %>/modernizr.custom.js',
-				'<%= sourceVendor %>/jquery.js',
-				'<%= sourceVendor %>/greensock.js',
-				'<%= sourceVendor %>/lodash.js',
-				'<%= sourceVendor %>/bootstrap.js',
+				'<%= sourceVendor %>/modernizr.custom.min.js',
+				'<%= sourceVendor %>/jquery.min.js',
+				'<%= sourceVendor %>/TweenMax.min.js',
+				'<%= sourceVendor %>/underscore.min.js',
+				'<%= sourceVendor %>/bootstrap.min.js',
 				'<%= sourceVendor %>/bootstrap-datepicker.js'
 			],
 			dest: '<%= localScripts %>/vendor.js'
@@ -27,11 +26,11 @@ module.exports = function (grunt) {
 
 		dist: {
 			src: [
-				'<%= sourceVendor %>/modernizr.custom.js',
-				'<%= sourceVendor %>/jquery.js',
-				'<%= sourceVendor %>/greensock.js',
-				'<%= sourceVendor %>/lodash.js',
-				'<%= sourceVendor %>/bootstrap.js',
+				'<%= sourceVendor %>/modernizr.custom.min.js',
+				'<%= sourceVendor %>/jquery.min.js',
+				'<%= sourceVendor %>/TweenMax.min.js',
+				'<%= sourceVendor %>/underscore.min.js',
+				'<%= sourceVendor %>/bootstrap.min.js',
 				'<%= sourceVendor %>/bootstrap-datepicker.js'
 			],
 			dest: '<%= publicScripts %>/vendor.js'

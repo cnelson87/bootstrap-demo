@@ -13,6 +13,11 @@ module.exports = function (grunt) {
 			spawn: false
 		},
 
+		data: {
+			files: ['<%= sourceData %>/**/*.json'],
+			tasks: ['copy:data']
+		},
+
 		html: {
 			files: '<%= sourceHTML %>/**/*.html',
 			tasks: ['includereplace:dev']
@@ -25,7 +30,7 @@ module.exports = function (grunt) {
 
 		styles: {
 			files: '<%= sourceStyles %>/**/*.scss',
-			tasks: ['sass:dev']
+			tasks: ['sass:dev', 'autoprefixer:dev']
 		},
 
 		templates: {
