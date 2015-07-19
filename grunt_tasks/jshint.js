@@ -27,8 +27,7 @@ module.exports = function (grunt) {
 		},
 
 		files: [
-			'<%= sourceScripts %>/**/*.js',
-			'!<%= sourceScripts %>/shims/**/*.js'
+			'<%= sourceScripts %>/**/*.js'
 		]
 
 	};

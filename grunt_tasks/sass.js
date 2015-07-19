@@ -10,6 +10,7 @@ module.exports = function (grunt) {
 
 		dev: {
 			options: {
+				sourcemap: 'auto',
 				style: 'expanded',
 				debug: true,
 				trace: true
@@ -22,7 +23,8 @@ module.exports = function (grunt) {
 
 		dist: {
 			options: {
-				style: 'compressed',
+				sourcemap: 'none',
+				style: 'expanded',
 				debug: false,
 				trace: false
 			},

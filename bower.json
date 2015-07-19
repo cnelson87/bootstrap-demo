@@ -3,13 +3,10 @@
 	"version": "0.1.0",
 	"main": "Gruntfile.js",
 	"dependencies": {
-		"jquery": "~2.1.1",
-		"lodash": "~2.4.1",
-		"greensock": "~1.13.2",
-		"bootstrap-sass-official": "~3.2.0",
+		"jquery": "~2.1.4",
+		"greensock": "~1.17.0",
+		"underscore": "~1.8.3",
+		"bootstrap-sass-official": "~3.3.5",
 		"bootstrap-datepicker": "~1.0.1"
-	},
-	"resolutions": {
-		"jquery": "~2.1.1"
 	}
 }

@@ -72,15 +72,19 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', 'generate a build', function(target) {
 		var target = (target === 'dev') ? 'dev' : 'dist';
 		var tasks = [
+			// 'bower',
+			'clean:' + target,
 			'includereplace:' + target,
 			'copy:' + target,
 			'sass:' + target,
+			'autoprefixer:' + target,
 			'jshint',
 			'concat:' + target,
 			'browserify:' + target
 		];
 		// optimize for dist build only
 		if (target === 'dist') {
+			tasks.push('cssmin');
 			tasks.push('uglify');
 		}
 		grunt.task.run(tasks);
