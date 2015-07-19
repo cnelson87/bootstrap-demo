@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 			pkgName		: pkg.name,
 			metaTitle	: pkg.title,
 			pkgDesc		: pkg.description,
-			fileName	: pkg.namespace,
+			assetName	: pkg.namespace,
 			portNum		: pkg.portNumber,
 			lrPortNum	: pkg.livereloadPortNum,
 
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 			sourceVendor		: '<%= sourcePath %>/vendor',
 
 			// local file paths
-			localPath			: './local',
+			localPath			: './_builds/local',
 			localData			: '<%= localPath %>/_api',
 			localAssets			: '<%= localPath %>/_ui',
 			localAudio			: '<%= localAssets %>/audio',
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 			localStyles			: '<%= localAssets %>/css',
 
 			// public file paths
-			publicPath			: './public',
+			publicPath			: './_builds/public',
 			publicData			: '<%= publicPath %>/_api',
 			publicAssets		: '<%= publicPath %>/_ui',
 			publicAudio			: '<%= publicAssets %>/audio',
@@ -56,7 +56,10 @@ module.exports = function(grunt) {
 			publicFonts			: '<%= publicAssets %>/fonts',
 			publicImages		: '<%= publicAssets %>/img',
 			publicScripts		: '<%= publicAssets %>/js',
-			publicStyles		: '<%= publicAssets %>/css'
+			publicStyles		: '<%= publicAssets %>/css',
+
+			// temp file paths (not currently used)
+			tempPath			: './_builds/temp'
 
 		},
 		loadGruntTasks: {

@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 			options: {
 				globals: {
 					"meta-title": "<%= metaTitle %>",
-					"file-name": "<%= fileName %>"
+					"file-name": "<%= assetName %>"
 				},
 				includesDir: '<%= sourceIncludes %>'
 			},
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 			options: {
 				globals: {
 					"meta-title": "<%= metaTitle %>",
-					"file-name": "<%= fileName %>"
+					"file-name": "<%= assetName %>"
 				},
 				includesDir: '<%= sourceIncludes %>'
 			},

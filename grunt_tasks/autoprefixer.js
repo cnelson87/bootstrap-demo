@@ -14,8 +14,8 @@ module.exports = function (grunt) {
 				map: true
 			},
 			files: [{
-				src: '<%= localStyles %>/<%= fileName %>.css',
-				dest: '<%= localStyles %>/<%= fileName %>.css'
+				src: '<%= localStyles %>/<%= assetName %>.css',
+				dest: '<%= localStyles %>/<%= assetName %>.css'
 			}]
 		},
 
@@ -25,8 +25,8 @@ module.exports = function (grunt) {
 				map: false
 			},
 			files: [{
-				src: '<%= publicStyles %>/<%= fileName %>.css',
-				dest: '<%= publicStyles %>/<%= fileName %>.css'
+				src: '<%= publicStyles %>/<%= assetName %>.css',
+				dest: '<%= publicStyles %>/<%= assetName %>.css'
 			}]
 		}
 

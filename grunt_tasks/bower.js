@@ -10,15 +10,14 @@ module.exports = function (grunt) {
 
 		install: {
 			options: {
-				//add bootstrap manually
-				ignorePackages: ['bootstrap-sass-official'],
 				stripJsAffix: true,
 				keepExpandedHierarchy: false,
-				expand: false
+				expand: false,
+				//add bootstrap manually
+				ignorePackages: ['bootstrap', 'bootstrap-datepicker', 'bootstrap-sass-official']
 			},
 			dest: '<%= sourceVendor %>'
 		}
-
 
 	};
 

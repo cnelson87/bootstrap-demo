@@ -10,8 +10,8 @@ module.exports = function (grunt) {
 
 		dist: {
 			files: [{
-				src: '<%= publicScripts %>/<%= fileName %>.js',
-				dest: '<%= publicScripts %>/<%= fileName %>.js'
+				src: '<%= publicScripts %>/<%= assetName %>.js',
+				dest: '<%= publicScripts %>/<%= assetName %>.js'
 			}]
 		}
 

@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 			},
 			files: [{
 				src: '<%= sourceStyles %>/styles.scss',
-				dest: '<%= localStyles %>/<%= fileName %>.css'
+				dest: '<%= localStyles %>/<%= assetName %>.css'
 			}]
 		},
 
@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 			},
 			files: [{
 				src: '<%= sourceStyles %>/styles.scss',
-				dest: '<%= publicStyles %>/<%= fileName %>.css'
+				dest: '<%= publicStyles %>/<%= assetName %>.css'
 			}]
 		}
 

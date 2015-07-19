@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 
 		dev: {
 			src: '<%= sourceScripts %>/initialize.js',
-			dest: '<%= localScripts %>/<%= fileName %>.js',
+			dest: '<%= localScripts %>/<%= assetName %>.js',
 			options: {
 				preBundleCB: function(b) {
 					b.plugin(remapify, [
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
 
 		dist: {
 			src: '<%= sourceScripts %>/initialize.js',
-			dest: '<%= publicScripts %>/<%= fileName %>.js',
+			dest: '<%= publicScripts %>/<%= assetName %>.js',
 			options: {
 				preBundleCB: function(b) {
 					b.plugin(remapify, [

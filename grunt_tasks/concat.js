@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 				'<%= sourceVendor %>/modernizr.custom.min.js',
 				'<%= sourceVendor %>/jquery.min.js',
 				'<%= sourceVendor %>/TweenMax.min.js',
-				'<%= sourceVendor %>/underscore-min.js',
+				'<%= sourceVendor %>/underscore.min.js',
 				'<%= sourceVendor %>/bootstrap.min.js',
 				'<%= sourceVendor %>/bootstrap-datepicker.js'
 			],
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 				'<%= sourceVendor %>/modernizr.custom.min.js',
 				'<%= sourceVendor %>/jquery.min.js',
 				'<%= sourceVendor %>/TweenMax.min.js',
-				'<%= sourceVendor %>/underscore-min.js',
+				'<%= sourceVendor %>/underscore.min.js',
 				'<%= sourceVendor %>/bootstrap.min.js',
 				'<%= sourceVendor %>/bootstrap-datepicker.js'
 			],
