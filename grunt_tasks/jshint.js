@@ -10,6 +10,7 @@ module.exports = function (grunt) {
 
 		options: {
 			// options here to override JSHint defaults
+			esnext: true,
 			globals: {
 				'alert': true,
 				'console': true,
@@ -21,7 +22,7 @@ module.exports = function (grunt) {
 				'jQuery': true,
 				'$': true,
 				'_': true,
-				'Backbone': true,
+				'Bootstrap': true,
 				'TweenMax': true
 			}
 		},

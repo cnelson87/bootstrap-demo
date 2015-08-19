@@ -8,6 +8,35 @@ var remapify = require('remapify');
 
 module.exports = function (grunt) {
 
+	// list all aliases
+	var aliases = [
+		{
+			cwd: './src/templates',
+			src: './**/*.hbs',
+			expose: 'templates'
+		},
+		{
+			cwd: './src/scripts/config',
+			src: './**/*.js',
+			expose: 'config'
+		},
+		{
+			cwd: './src/scripts/utilities',
+			src: './**/*.js',
+			expose: 'utilities'
+		},
+		{
+			cwd: './src/scripts/views',
+			src: './**/*.js',
+			expose: 'views'
+		},
+		{
+			cwd: './src/scripts/widgets',
+			src: './**/*.js',
+			expose: 'widgets'
+		}
+	];
+
 	return {
 
 		dev: {
@@ -15,28 +44,7 @@ module.exports = function (grunt) {
 			dest: '<%= localScripts %>/<%= assetName %>.js',
 			options: {
 				preBundleCB: function(b) {
-					b.plugin(remapify, [
-						{
-							cwd: './src/templates',
-							src: './**/*.hbs',
-							expose: 'templates'
-						},
-						{
-							cwd: './src/scripts/config',
-							src: './**/*.*',
-							expose: 'config'
-						},
-						{
-							cwd: './src/scripts/utilities',
-							src: './**/*.*',
-							expose: 'utilities'
-						},
-						{
-							cwd: './src/scripts/widgets',
-							src: './**/*.*',
-							expose: 'widgets'
-						}
-					]);
+					b.plugin(remapify, aliases);
 				},
 				browserifyOptions: {
 					extensions: ['.hbs'],
@@ -51,28 +59,7 @@ module.exports = function (grunt) {
 			dest: '<%= publicScripts %>/<%= assetName %>.js',
 			options: {
 				preBundleCB: function(b) {
-					b.plugin(remapify, [
-						{
-							cwd: './src/templates',
-							src: './**/*.hbs',
-							expose: 'templates'
-						},
-						{
-							cwd: './src/scripts/config',
-							src: './**/*.*',
-							expose: 'config'
-						},
-						{
-							cwd: './src/scripts/utilities',
-							src: './**/*.*',
-							expose: 'utilities'
-						},
-						{
-							cwd: './src/scripts/widgets',
-							src: './**/*.*',
-							expose: 'widgets'
-						}
-					]);
+					b.plugin(remapify, aliases);
 				},
 				browserifyOptions: {
 					extensions: ['.hbs'],

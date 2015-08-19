@@ -1,12 +1,16 @@
 {
 	"name": "bootstrap-demo",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"main": "Gruntfile.js",
 	"dependencies": {
+		"modernizr": "~2.8.3",
 		"jquery": "~2.1.4",
+		"jquery-touchswipe": "~1.6.9",
 		"greensock": "~1.17.0",
+		"picturefill": "~2.3.1",
 		"underscore": "~1.8.3",
+		"font-awesome": "~4.4.0",
 		"bootstrap-sass-official": "~3.3.5",
-		"bootstrap-datepicker": "~1.0.1"
+		"bootstrap-datepicker": "~1.4.0"
 	}
 }

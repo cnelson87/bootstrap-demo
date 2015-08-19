@@ -1,9 +1,11 @@
 
 // start with building bootstrap
-@import "bootstrap/bootstrap";
-@import "bootstrap/datepicker3";
-//@import "bootstrap/theme";
+@import "bootstrap-custom-vars";
+@import "bootstrap";
+
+// add 3rd party
+@import "bootstrap-datepicker3";
+@import "font-awesome";
 
 // customize & override
 @import "overrides/overrides";
-

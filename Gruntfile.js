@@ -39,24 +39,24 @@ module.exports = function(grunt) {
 			// local file paths
 			localPath			: './_builds/local',
 			localData			: '<%= localPath %>/_api',
-			localAssets			: '<%= localPath %>/_ui',
+			localAssets			: '<%= localPath %>/_assets',
 			localAudio			: '<%= localAssets %>/audio',
 			localVideo			: '<%= localAssets %>/video',
 			localFonts			: '<%= localAssets %>/fonts',
-			localImages			: '<%= localAssets %>/img',
-			localScripts		: '<%= localAssets %>/js',
-			localStyles			: '<%= localAssets %>/css',
+			localImages			: '<%= localAssets %>/images',
+			localScripts		: '<%= localAssets %>/scripts',
+			localStyles			: '<%= localAssets %>/styles',
 
 			// public file paths
 			publicPath			: './_builds/public',
 			publicData			: '<%= publicPath %>/_api',
-			publicAssets		: '<%= publicPath %>/_ui',
+			publicAssets		: '<%= publicPath %>/_assets',
 			publicAudio			: '<%= publicAssets %>/audio',
 			publicVideo			: '<%= publicAssets %>/video',
 			publicFonts			: '<%= publicAssets %>/fonts',
-			publicImages		: '<%= publicAssets %>/img',
-			publicScripts		: '<%= publicAssets %>/js',
-			publicStyles		: '<%= publicAssets %>/css',
+			publicImages		: '<%= publicAssets %>/images',
+			publicScripts		: '<%= publicAssets %>/scripts',
+			publicStyles		: '<%= publicAssets %>/styles',
 
 			// temp file paths (not currently used)
 			tempPath			: './_builds/temp'
@@ -75,7 +75,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', 'generate a build', function(target) {
 		var target = (target === 'dev') ? 'dev' : 'dist';
 		var tasks = [
-			// 'bower',
+			'bower',
+			'bowercopy',
 			'clean:' + target,
 			'includereplace:' + target,
 			'copy:' + target,

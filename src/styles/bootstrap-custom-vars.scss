@@ -1,0 +1,179 @@
+//
+// Bootstrap Custom Vars
+// --------------------------------------------------
+
+
+//== Colors
+
+$gray-darker:           #222;
+$gray-dark:             #333;
+$gray:                  #555;
+$gray-light:            #777;
+$gray-lighter:          #eee;
+
+$brand-primary:         #2a9fd6;
+$brand-success:         #77b300;
+$brand-info:            #9933cc;
+$brand-warning:         #ff8800;
+$brand-danger:          #cc0000;
+
+
+//== Scaffolding
+
+$body-bg:               $gray-darker;
+$text-color:            $gray-light;
+
+
+//== Typography
+
+$font-size-h1:            48px;
+$font-size-h2:            36px;
+$font-size-h3:            24px;
+$font-size-h4:            18px;
+$font-size-h5:            14px;
+$font-size-h6:            12px;
+$headings-line-height:    1.0;
+
+
+//== Iconography
+
+$icon-font-path: "../fonts/";
+
+
+//== Components
+
+
+
+//== Tables
+
+
+
+//== Buttons
+
+$btn-default-color:              #fff;
+$btn-default-bg:                 #424242;
+$btn-default-border:             darken($btn-default-bg, 0%);
+
+
+//== Forms
+
+
+
+//== Dropdowns
+
+
+
+//== Media queries breakpoints
+
+$screen-xs:                  320px;
+$screen-sm:                  768px;
+$screen-md:                  1024px;
+$screen-lg:                  1280px;
+
+
+//== Grid system
+
+$grid-gutter-width:          32px;
+
+
+//== Container sizes
+
+$container-tablet:           (720px + $grid-gutter-width);
+$container-desktop:          (960px + $grid-gutter-width);
+$container-large-desktop:    (1200px + $grid-gutter-width);
+
+
+//== Navbar
+
+$navbar-inverse-bg:          #060606;
+
+
+
+//== Navs
+
+
+
+//== Pagination
+
+
+
+//== Pager
+
+
+
+//== Jumbotron
+
+
+
+//== Form states and alerts
+
+$state-success-text:             #77b300;
+$state-info-text:                #9933cc;
+$state-warning-text:             #ff8800;
+$state-danger-text:              #cc0000;
+
+
+//== Tooltips
+
+
+
+//== Popovers
+
+
+
+//== Labels
+
+
+
+//== Modals
+
+
+
+//== Alerts
+
+
+
+//== Progress bars
+
+
+
+//== List group
+
+
+
+//== Panels
+
+
+
+//== Thumbnails
+
+
+
+//== Wells
+
+
+
+//== Badges
+
+
+
+//== Breadcrumbs
+
+
+
+//== Carousel
+
+
+
+//== Close
+
+
+
+//== Code
+
+
+
+//== Type
+
+$text-muted:                  $gray;
+
