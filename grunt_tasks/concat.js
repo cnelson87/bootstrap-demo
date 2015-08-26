@@ -13,7 +13,6 @@ module.exports = function (grunt) {
 		'<%= sourceVendor %>/jquery.touchSwipe.js',
 		'<%= sourceVendor %>/picturefill.js',
 		'<%= sourceVendor %>/TweenMax.js',
-		'<%= sourceVendor %>/underscore.js',
 		'<%= sourceVendor %>/bootstrap.js',
 		'<%= sourceVendor %>/bootstrap-datepicker.js'
 	];

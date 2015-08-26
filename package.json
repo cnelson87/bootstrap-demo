@@ -49,8 +49,7 @@
 		"transform": ["browserify-shim", "browserify-handlebars", "babelify"]
 	},
 	"browserify-shim": {
-		"jquery": "global:$",
-		"underscore": "global:_"
+		"jquery": "global:$"
 	}
 
 }
