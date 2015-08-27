@@ -5,7 +5,7 @@
 	"namespace": "bsdemo",
 	"version": "0.2.0",
 	"main": "Gruntfile.js",
-	"portNumber": 3273,
+	"portNumber": 8273,
 	"livereloadPortNum": 30273,
 	"devDependencies": {
 		"grunt": "0.4.5",

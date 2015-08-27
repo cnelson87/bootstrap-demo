@@ -83,7 +83,7 @@ module.exports = function(grunt) {
 			'sass:' + target,
 			'autoprefixer:' + target,
 			'jshint',
-			'concat:' + target,
+			'concat:' + target + 'libs',
 			'browserify:' + target
 		];
 		// optimize for dist build only
