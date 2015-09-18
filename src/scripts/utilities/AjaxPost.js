@@ -1,12 +1,12 @@
 /**
- *  AjaxPost
+ *  ajaxPost
  *  @author Chris Nelson
  *	Returns an Ajax POST response using deferred, url & data are required,
  *  contentType, dataType, and crossDomain are optional.
  *  @return: json, html, text
  */
 
-var AjaxPost = function(url, data, contentType, dataType, crossDomain) {
+const ajaxPost = function(url, data, contentType, dataType, crossDomain) {
 	return $.ajax({
 		type: 'POST',
 		url: url,
@@ -17,4 +17,4 @@ var AjaxPost = function(url, data, contentType, dataType, crossDomain) {
 	});
 };
 
-module.exports = AjaxPost;
+export default ajaxPost;

@@ -4,11 +4,8 @@
  *	Global PubSub object for dispatch and delegation
  */
 
-var _					= require('underscore');
-var Backbone			= require('backbone');
-
-var PubSub = {};
+const PubSub = {};
 
 _.extend( PubSub, Backbone.Events );
 
-module.exports = PubSub;
+export default PubSub;

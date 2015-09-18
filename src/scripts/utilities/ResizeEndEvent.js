@@ -1,17 +1,16 @@
 /**
- *  ResizeEndEvent
+ *  resizeEndEvent
  *  @author Chris Nelson
  *	Broadcasts a pseudo 'resizeEnd' event
  */
 
-var AppConfig			= require('config/AppConfig');
-var AppEvents			= require('config/AppEvents');
-var PubSub				= require('utilities/PubSub');
+import AppConfig from 'config/AppConfig';
+import AppEvents from 'config/AppEvents';
+import PubSub from 'utilities/PubSub';
 
-var ResizeEndEvent = function() {
+const resizeEndEvent = function() {
 	var resizeTimer;
 	$(window).on('resize', function(event) {
-		//PubSub.trigger(AppEvents.WINDOW_RESIZE);
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(function() {
 			PubSub.trigger(AppEvents.WINDOW_RESIZE_END);
@@ -19,4 +18,4 @@ var ResizeEndEvent = function() {
 	});
 };
 
-module.exports = ResizeEndEvent;
+export default resizeEndEvent;

@@ -1,12 +1,12 @@
 /**
- *  AjaxGet
+ *  ajaxGet
  *  @author Chris Nelson
  *	Returns an Ajax GET request using deferred, url is required,
  *  dataType and crossDomain are optional.
  *  @return: json, html, text
  */
 
-var AjaxGet = function(url, dataType, crossDomain) {
+const ajaxGet = function(url, dataType, crossDomain) {
 	return $.ajax({
 		type: 'GET',
 		url: url,
@@ -15,4 +15,4 @@ var AjaxGet = function(url, dataType, crossDomain) {
 	});
 };
 
-module.exports = AjaxGet;
+export default ajaxGet;

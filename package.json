@@ -3,7 +3,7 @@
 	"title": "Bootstrap Demo",
 	"description": "A Bootstrap Demo, compiled from sass source.",
 	"namespace": "bsdemo",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"main": "Gruntfile.js",
 	"portNumber": 8273,
 	"livereloadPortNum": 30273,
@@ -42,8 +42,8 @@
 		"type": "git",
 		"url": "https://github.com/cnelson87/bootstrap-demo"
 	},
-	"license": "",
-	"author": "cnelson87@gmail.com",
+	"license": "MIT",
+	"author": "Chris Nelson <cnelson87@gmail.com>",
 	"readmeFilename": "README.md",
 
 	"browserify": {

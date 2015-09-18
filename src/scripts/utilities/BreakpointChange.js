@@ -1,17 +1,17 @@
 /**
- *  BreakpointChange
+ *  breakpointChange
  *  @author Chris Nelson
  *	Create pseudo 'breakpointChange' event
  */
 
-var AppConfig				= require('config/AppConfig');
-var AppEvents				= require('config/AppEvents');
-var PubSub					= require('utilities/PubSub');
+import AppConfig from 'config/AppConfig';
+import AppEvents from 'config/AppEvents';
+import PubSub from 'utilities/PubSub';
 
-var BreakpointChange = function() {
+const breakpointChange = function() {
 
 	var $elIndicator = $('<div></div>',{
-		'id': 'breakpoint-responder'
+		'id': 'breakpoint-indicator'
 	}).appendTo($('body'));
 	var zIndex = $elIndicator.css('z-index');
 
@@ -39,4 +39,4 @@ var BreakpointChange = function() {
 
 };
 
-module.exports = BreakpointChange;
+export default breakpointChange;

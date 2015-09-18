@@ -1,10 +1,10 @@
 /**
- *  UrlQueryString
+ *  urlQueryString
  *  @author Chris Nelson
  *	Reads query string and returns an object of name / value pairs.
  */
 
-var UrlQueryString = function() {
+const urlQueryString = function() {
 	var qs = location.search;
 	var pairs = qs.slice(1).split('&');
 	var result = {};
@@ -19,4 +19,4 @@ var UrlQueryString = function() {
 	return result;
 };
 
-module.exports = UrlQueryString;
+export default urlQueryString;
