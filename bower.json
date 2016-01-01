@@ -4,9 +4,9 @@
 	"dependencies": {
 		"modernizr": "~2.8.3",
 		"jquery": "~2.1.4",
-		"jquery-touchswipe": "~1.6.9",
-		"greensock": "~1.18.0",
-		"picturefill": "~2.3.1",
+		"jquery-touchswipe": "~1.6.15",
+		"greensock": "~1.18.2",
+		"picturefill": "~3.0.1",
 		"font-awesome": "~4.4.0",
 		"bootstrap-sass-official": "~3.3.5",
 		"bootstrap-datepicker": "~1.4.1"
