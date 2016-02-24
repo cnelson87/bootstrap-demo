@@ -6,15 +6,19 @@
 import AppConfig from 'config/AppConfig';
 import AppEvents from 'config/AppEvents';
 import PubSub from 'utilities/PubSub';
-import resizeEndEvent from 'utilities/resizeEndEvent';
-import scrollEndEvent from 'utilities/scrollEndEvent';
-import breakpointChange from 'utilities/breakpointChange';
+import breakpointChangeEvent from 'utilities/breakpointChangeEvent';
+import resizeStartStopEvents from 'utilities/resizeStartStopEvents';
+import scrollStartStopEvents from 'utilities/scrollStartStopEvents';
+import AppState from 'models/AppState';
+
 
 const Application = {
 
 	initialize: function() {
 		// console.log('Application:initialize');
 
+		this.$window = $(window);
+		this.$document = $(document);
 		this.$html = $('html');
 		this.$body = $('body');
 
@@ -24,41 +28,65 @@ const Application = {
 		if (AppConfig.isIE10) {this.$html.addClass('ie10');}
 		if (AppConfig.isIE11) {this.$html.addClass('ie11');}
 
+		this.appState = new AppState();
+
 		// Initialize custom events
-		resizeEndEvent();
-		scrollEndEvent();
-		breakpointChange();
+		breakpointChangeEvent();
+		resizeStartStopEvents();
+		scrollStartStopEvents();
 
 		this.bindEvents();
+
+		switch(this.bodyID) {
+			case 'homepage':
+				// console.log('init homepage');
+				break;
+			default:
+				// console.log('default');
+		}
 
 	},
 
 	bindEvents: function() {
-		PubSub.on(AppEvents.WINDOW_RESIZE_END, this.onWindowResizeEnd, this);
-		PubSub.on(AppEvents.WINDOW_SCROLL_END, this.onWindowScrollEnd, this);
+		PubSub.on(AppEvents.WINDOW_RESIZE_START, this.onWindowResizeStart, this);
+		PubSub.on(AppEvents.WINDOW_RESIZE_STOP, this.onWindowResizeStop, this);
+		PubSub.on(AppEvents.WINDOW_SCROLL_START, this.onWindowScrollStart, this);
+		PubSub.on(AppEvents.WINDOW_SCROLL_STOP, this.onWindowScrollStop, this);
 		PubSub.on(AppEvents.BREAKPOINT_CHANGE, this.onBreakpointChange, this);
 	},
 
 	unbindEvents: function() {
-		PubSub.off(AppEvents.WINDOW_RESIZE_END, this.onWindowResizeEnd, this);
-		PubSub.off(AppEvents.WINDOW_SCROLL_END, this.onWindowScrollEnd, this);
+		PubSub.off(AppEvents.WINDOW_RESIZE_START, this.onWindowResizeStart, this);
+		PubSub.off(AppEvents.WINDOW_RESIZE_STOP, this.onWindowResizeStop, this);
+		PubSub.off(AppEvents.WINDOW_SCROLL_START, this.onWindowScrollStart, this);
+		PubSub.off(AppEvents.WINDOW_SCROLL_STOP, this.onWindowScrollStop, this);
 		PubSub.off(AppEvents.BREAKPOINT_CHANGE, this.onBreakpointChange, this);
 	},
 
-	onWindowResizeEnd: function() {
-		console.log('onWindowResizeEnd');
+	onWindowResizeStart: function() {
+		// console.log('onWindowResizeStart');
 	},
 
-	onWindowScrollEnd: function() {
-		console.log('onWindowScrollEnd');
+	onWindowResizeStop: function() {
+		// console.log('onWindowResizeStop');
+	},
+
+	onWindowScrollStart: function() {
+		// console.log('onWindowScrollStart');
+	},
+
+	onWindowScrollStop: function() {
+		// console.log('onWindowScrollStop');
 	},
 
 	onBreakpointChange: function(params) {
-		console.log('onBreakpointChange', params);
+		// console.log('onBreakpointChange', params);
 		// Store currentBreakpoint in a Backbone model
 		this.appState.set({currentBreakpoint: AppConfig.currentBreakpoint});
 	}
 
 };
+
+window.Application = Application;
 
 export default Application;

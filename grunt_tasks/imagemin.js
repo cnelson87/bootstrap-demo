@@ -12,15 +12,6 @@ module.exports = function (grunt) {
 			optimizationLevel: 5
 		},
 
-		dev: {
-			files: [{
-				cwd: '<%= sourceImages %>',
-				src: '**/*.*',
-				dest: '<%= localImages %>',
-				expand: true
-			}]
-		},
-
 		dist: {
 			files: [{
 				cwd: '<%= sourceImages %>',

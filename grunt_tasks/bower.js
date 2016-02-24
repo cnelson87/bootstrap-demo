@@ -25,8 +25,7 @@ module.exports = function (grunt) {
 				ignorePackages: [
 					'font-awesome',
 					'bootstrap-datepicker',
-					'bootstrap-sass-official',
-					'bootstrap'
+					'bootstrap-sass-official'
 				],
 
 				packageSpecific: {

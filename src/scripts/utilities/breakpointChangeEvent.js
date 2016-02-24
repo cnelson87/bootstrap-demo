@@ -1,14 +1,14 @@
 /**
- *  breakpointChange
+ *  breakpointChangeEvent
  *  @author Chris Nelson
- *	Create pseudo 'breakpointChange' event
+ *	Broadcasts pseudo 'breakpointChange' event
  */
 
 import AppConfig from 'config/AppConfig';
 import AppEvents from 'config/AppEvents';
 import PubSub from 'utilities/PubSub';
 
-const breakpointChange = function() {
+const breakpointChangeEvent = function() {
 
 	var $elIndicator = $('<div></div>',{
 		'id': 'breakpoint-indicator'
@@ -39,4 +39,4 @@ const breakpointChange = function() {
 
 };
 
-export default breakpointChange;
+export default breakpointChangeEvent;

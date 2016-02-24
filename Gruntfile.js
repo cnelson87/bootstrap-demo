@@ -90,8 +90,11 @@ module.exports = function(grunt) {
 		];
 		// optimize for dist build only
 		if (target === 'dist') {
-			tasks.push('cssmin');
-			tasks.push('uglify');
+			tasks.push('htmlmin:dist');
+			tasks.push('cssmin:dist');
+			tasks.push('uglify:dist');
+			// need to revisit -- imagemin isn't working as expected.
+			// tasks.push('imagemin:dist');
 		}
 		grunt.task.run(tasks);
 	});

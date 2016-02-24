@@ -23,9 +23,9 @@
 		z-index: 3;
 	}
 
-	// lg / Desktop Wide+
-	@media (min-width: $screen-lg-min) {
-		z-index: 4;
-	}
+	// lg / Widescreen+
+	// @media (min-width: $screen-lg-min) {
+	// 	z-index: 4;
+	// }
 
 }
