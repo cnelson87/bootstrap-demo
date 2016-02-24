@@ -1,0 +1,38 @@
+//
+// Utilities
+// --------------------------------------------------
+
+
+.clear {
+	clear: both;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.block {
+	display: block;
+}
+
+.inline {
+	display: inline;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.offscreen {
+	display: block;
+	position: fixed;
+	left: -9999px;
+}

@@ -1,0 +1,46 @@
+//
+// Grids
+// --------------------------------------------------
+
+
+/*
+	Grid enhancements to force clearing when all items are the same.
+	Requires '.col-*-x' class for each breakpoint.
+*/
+.row.grid-container {
+
+	@media (max-width: $screen-xs-max) {
+		.col-xs-6:nth-child(2n+1),
+		.col-xs-4:nth-child(3n+1),
+		.col-xs-3:nth-child(4n+1) {
+			clear: both;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		.col-sm-6:nth-child(2n+1),
+		.col-sm-4:nth-child(3n+1),
+		.col-sm-3:nth-child(4n+1) {
+			clear: both;
+		}
+	}
+
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		.col-md-6:nth-child(2n+1),
+		.col-md-4:nth-child(3n+1),
+		.col-md-3:nth-child(4n+1),
+		.col-md-2:nth-child(6n+1) {
+			clear: both;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.col-lg-6:nth-child(2n+1),
+		.col-lg-4:nth-child(3n+1),
+		.col-lg-3:nth-child(4n+1),
+		.col-lg-2:nth-child(6n+1) {
+			clear: both;
+		}
+	}
+
+}

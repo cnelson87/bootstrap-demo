@@ -1,3 +1,10 @@
+//
+// Chrome
+// --------------------------------------------------
+
+
+$site-min-width: 360px;
+
 
 html {
 	min-height: 100%;
@@ -11,7 +18,7 @@ body {
 
 
 #header {
-	min-width: $screen-xs-min;
+	min-width: $site-min-width;
 
 	> .container {
 		padding: 20px 15px;
@@ -24,7 +31,7 @@ body {
 
 
 #footer {
-	min-width: $screen-xs-min;
+	min-width: $site-min-width;
 	position: absolute;
 
 	> .container {
@@ -38,6 +45,5 @@ body {
 
 
 #main {
-	min-width: $screen-xs-min;
+	min-width: $site-min-width;
 }
-

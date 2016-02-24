@@ -1,0 +1,33 @@
+//
+// Headerbar
+// --------------------------------------------------
+
+
+.hdr-bar {
+	background-color: $gray-lighter;
+	padding: $padding-base-vertical $padding-base-horizontal;
+}
+.hdr-bar.hdr-bar-default {
+	color: $white;
+	background-color: $gray-dark;
+}
+.hdr-bar.hdr-bar-primary {
+	color: $white;
+	background-color: $brand-primary;
+}
+.hdr-bar.hdr-bar-success {
+	color: $white;
+	background-color: $brand-success;
+}
+.hdr-bar.hdr-bar-info {
+	color: $white;
+	background-color: $brand-info;
+}
+.hdr-bar.hdr-bar-warning {
+	color: $white;
+	background-color: $brand-warning;
+}
+.hdr-bar.hdr-bar-danger {
+	color: $white;
+	background-color: $brand-danger;
+}

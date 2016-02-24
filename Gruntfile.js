@@ -71,12 +71,14 @@ module.exports = function(grunt) {
 
 
 	// Register custom tasks
-	//grunt.registerTask('bower', ['bower']);
 	grunt.registerTask('build', 'generate a build', function(target) {
 		var target = (target === 'dev') ? 'dev' : 'dist';
 		var tasks = [
-			'bower',
-			'bowercopy',
+			// Manually run bower tasks only when updating libs.
+			// Vendor libs are checked-in to src/vendor, so no 
+			// need to run bower tasks when building.
+			// 'bower',
+			// 'bowercopy',
 			'clean:' + target,
 			'includereplace:' + target,
 			'copy:' + target,

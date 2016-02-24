@@ -14,7 +14,10 @@ module.exports = function (grunt) {
 		'<%= sourceVendor %>/picturefill.js',
 		'<%= sourceVendor %>/TweenMax.js',
 		'<%= sourceVendor %>/bootstrap.js',
-		'<%= sourceVendor %>/bootstrap-datepicker.js'
+		'<%= sourceVendor %>/bootstrap-datepicker.js',
+		'<%= sourceVendor %>/underscore.js',
+		'<%= sourceVendor %>/backbone.js',
+		'<%= sourceVendor %>/backbone-super.js'
 	];
 
 	return {

@@ -1,28 +1,31 @@
 //
-// BREAKPOINTS
-// -----------------------------------------------------
+// Breakpoint Indicator
+// --------------------------------------------------
+// An element that changes z-index when a breakpoint is crossed
+// Used in conjunction with /scripts/utiities/BreakpointChange.js
 
 
-// Mobile / Defaults
 #breakpoint-indicator {
 	width: 1px;
 	height: 1px;
 	position: fixed;
 	left: -1px;
 	top: -1px;
-	z-index: 1;
-}
+	z-index: 1; // default xs / Mobile
 
-// Tablet
-@media (min-width: $tablet-min) {
-	#breakpoint-indicator {
+	// sm / Tablet+
+	@media (min-width: $screen-sm-min) {
 		z-index: 2;
 	}
-}
 
-// Desktop
-@media (min-width: $desktop-min) {
-	#breakpoint-indicator {
+	// md / Desktop+
+	@media (min-width: $screen-md-min) {
 		z-index: 3;
 	}
+
+	// lg / Desktop Wide+
+	@media (min-width: $screen-lg-min) {
+		z-index: 4;
+	}
+
 }
