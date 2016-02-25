@@ -1,7 +1,7 @@
 /**
  *  PubSub
  *  @author Chris Nelson
- *	Global PubSub object for dispatch and delegation
+ *  Global event bus; extends Backbone Events object.
  */
 
 const PubSub = {};

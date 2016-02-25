@@ -3,7 +3,7 @@
 	"title": "Bootstrap Demo",
 	"description": "A Bootstrap Demo, compiled from sass source.",
 	"namespace": "bsdemo",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"main": "Gruntfile.js",
 	"portNumber": 8273,
 	"livereloadPortNum": 30273,

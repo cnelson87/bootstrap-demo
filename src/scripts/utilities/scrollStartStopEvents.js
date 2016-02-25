@@ -1,7 +1,7 @@
 /**
  *  scrollStartStopEvents
  *  @author Chris Nelson
- *	Broadcasts pseudo 'scrollStart' and 'scrollStop' events
+ *  Broadcasts pseudo 'scrollStart' and 'scrollStop' events.
  */
 
 import AppConfig from 'config/AppConfig';

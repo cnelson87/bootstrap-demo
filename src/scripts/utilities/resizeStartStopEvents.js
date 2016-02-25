@@ -1,7 +1,7 @@
 /**
  *  resizeStartStopEvents
  *  @author Chris Nelson
- *	Broadcasts pseudo 'resizeStart' and 'resizeStop' events
+ *  Broadcasts pseudo 'resizeStart' and 'resizeStop' events.
  */
 
 import AppConfig from 'config/AppConfig';

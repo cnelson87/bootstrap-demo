@@ -1,7 +1,7 @@
 /**
  *  urlQueryString
  *  @author Chris Nelson
- *	Reads query string and returns an object of name / value pairs.
+ *  Reads query string and returns an object of name / value pairs.
  */
 
 const urlQueryString = function() {

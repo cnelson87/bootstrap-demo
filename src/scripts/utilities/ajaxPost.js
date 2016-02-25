@@ -1,8 +1,7 @@
 /**
  *  ajaxPost
  *  @author Chris Nelson
- *	Returns an Ajax POST response using deferred, url & data are required,
- *  contentType, dataType, and crossDomain are optional.
+ *  Returns an Ajax POST response; url & data are required, contentType, dataType, and crossDomain are optional.
  *  @return: json, html, text
  */
 

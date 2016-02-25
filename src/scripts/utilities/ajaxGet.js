@@ -1,8 +1,7 @@
 /**
  *  ajaxGet
  *  @author Chris Nelson
- *	Returns an Ajax GET request using deferred, url is required,
- *  dataType and crossDomain are optional.
+ *  Returns an Ajax GET request; url is required, dataType and crossDomain are optional.
  *  @return: json, html, text
  */
 

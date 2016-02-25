@@ -1,7 +1,7 @@
 /**
  *  breakpointChangeEvent
  *  @author Chris Nelson
- *	Broadcasts pseudo 'breakpointChange' event
+ *  Broadcasts a pseudo 'breakpointChange' event. Used in conjunction with bp-indicator.sass.
  */
 
 import AppConfig from 'config/AppConfig';
