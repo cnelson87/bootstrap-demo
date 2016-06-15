@@ -1,6 +1,6 @@
 /**
- * Application Module
- * @author Chris Nelson
+ * Application
+ * @author: Chris Nelson <cnelson87@gmail.com>
  */
 
 import AppConfig from 'config/AppConfig';
@@ -27,6 +27,8 @@ const Application = {
 		if (AppConfig.isIE9) {this.$html.addClass('ie9');}
 		if (AppConfig.isIE10) {this.$html.addClass('ie10');}
 		if (AppConfig.isIE11) {this.$html.addClass('ie11');}
+		if (AppConfig.isAndroid) {this.$html.addClass('android');}
+		if (AppConfig.isIOS) {this.$html.addClass('ios');}
 
 		this.appState = new AppState();
 
@@ -35,7 +37,7 @@ const Application = {
 		resizeStartStopEvents();
 		scrollStartStopEvents();
 
-		this.bindEvents();
+		this._addEventListeners();
 
 		switch(this.bodyID) {
 			case 'homepage':
@@ -47,7 +49,7 @@ const Application = {
 
 	},
 
-	bindEvents: function() {
+	_addEventListeners: function() {
 		PubSub.on(AppEvents.WINDOW_RESIZE_START, this.onWindowResizeStart, this);
 		PubSub.on(AppEvents.WINDOW_RESIZE_STOP, this.onWindowResizeStop, this);
 		PubSub.on(AppEvents.WINDOW_SCROLL_START, this.onWindowScrollStart, this);
@@ -55,7 +57,7 @@ const Application = {
 		PubSub.on(AppEvents.BREAKPOINT_CHANGE, this.onBreakpointChange, this);
 	},
 
-	unbindEvents: function() {
+	_removeEventListeners: function() {
 		PubSub.off(AppEvents.WINDOW_RESIZE_START, this.onWindowResizeStart, this);
 		PubSub.off(AppEvents.WINDOW_RESIZE_STOP, this.onWindowResizeStop, this);
 		PubSub.off(AppEvents.WINDOW_SCROLL_START, this.onWindowScrollStart, this);

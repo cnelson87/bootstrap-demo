@@ -1,8 +1,7 @@
 /**
- * Application Initializer
- * @author Chris Nelson
+ * initialize
  */
- 
+
 var Application = require('./Application');
 
 $(function() {

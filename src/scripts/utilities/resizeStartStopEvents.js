@@ -1,7 +1,7 @@
 /**
- *  resizeStartStopEvents
- *  @author Chris Nelson
- *  Broadcasts pseudo 'resizeStart' and 'resizeStop' events.
+ * resizeStartStopEvents
+ * @author: Chris Nelson <cnelson87@gmail.com>
+ * @description: Broadcasts pseudo 'resizeStart' and 'resizeStop' events
  */
 
 import AppConfig from 'config/AppConfig';
@@ -9,7 +9,7 @@ import AppEvents from 'config/AppEvents';
 import PubSub from 'utilities/PubSub';
 
 const resizeStartStopEvents = function() {
-	var timer;
+	let timer;
 	$(window).on('resize', function(event) {
 		if (timer) {
 			clearTimeout(timer);

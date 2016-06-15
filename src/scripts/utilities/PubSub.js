@@ -1,11 +1,11 @@
 /**
- *  PubSub
- *  @author Chris Nelson
- *  Global event bus; extends Backbone Events object.
+ * PubSub
+ * @author: Chris Nelson <cnelson87@gmail.com>
+ * @description: Global event bus for dispatch and delegation.
  */
 
 const PubSub = {};
 
-_.extend( PubSub, Backbone.Events );
+_.extend(PubSub, Backbone.Events);
 
 export default PubSub;

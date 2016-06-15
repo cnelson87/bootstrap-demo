@@ -1,6 +1,6 @@
 /**
- * Application State
- * @author Chris Nelson
+ * AppState
+ * @author: Chris Nelson <cnelson87@gmail.com>
  */
 
 const AppState = Backbone.Model.extend({

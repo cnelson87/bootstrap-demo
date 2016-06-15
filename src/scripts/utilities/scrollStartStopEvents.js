@@ -1,7 +1,7 @@
 /**
- *  scrollStartStopEvents
- *  @author Chris Nelson
- *  Broadcasts pseudo 'scrollStart' and 'scrollStop' events.
+ * scrollStartStopEvents
+ * @author: Chris Nelson <cnelson87@gmail.com>
+ * @description: Broadcasts pseudo 'scrollStart' and 'scrollStop' events
  */
 
 import AppConfig from 'config/AppConfig';
@@ -9,7 +9,7 @@ import AppEvents from 'config/AppEvents';
 import PubSub from 'utilities/PubSub';
 
 const scrollStartStopEvents = function() {
-	var timer;
+	let timer;
 	$(window).on('scroll', function(event) {
 		if (timer) {
 			clearTimeout(timer);
