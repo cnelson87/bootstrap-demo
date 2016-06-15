@@ -1,4 +1,3 @@
-
 /**
  * connect
  * Start a connect web server.
@@ -8,10 +7,10 @@ module.exports = function (grunt) {
 
 	return {
 
-		dev: {
+		localhost: {
 			options: {
+				hostname: '*',
 				base: '<%= localPath %>/',
-				hostname: 'localhost',
 				port: '<%= portNum %>',
 				livereload: '<%= lrPortNum %>'
 			}

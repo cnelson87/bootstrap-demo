@@ -93,8 +93,6 @@ module.exports = function(grunt) {
 			tasks.push('htmlmin:dist');
 			tasks.push('cssmin:dist');
 			tasks.push('uglify:dist');
-			// need to revisit -- imagemin isn't working as expected.
-			// tasks.push('imagemin:dist');
 		}
 		grunt.task.run(tasks);
 	});

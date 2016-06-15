@@ -1,4 +1,3 @@
-
 /**
  * copy
  * Copy files and folders.

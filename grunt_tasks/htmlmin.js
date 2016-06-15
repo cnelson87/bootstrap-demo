@@ -1,4 +1,3 @@
-
 /**
  * htmlmin
  * Minify HTML

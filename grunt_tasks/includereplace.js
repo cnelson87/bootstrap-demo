@@ -1,4 +1,3 @@
-
 /**
  * includereplace
  * Grunt task to include files and replace variables to build HTML pages.
@@ -6,16 +5,21 @@
 
 module.exports = function (grunt) {
 
+	// list all global vars
+	var globalsVars = {
+		"meta-title": "<%= metaTitle %>",
+		"file-name": "<%= assetName %>",
+		"img-path": "/_assets/images"
+	};
+
 	return {
 
+		options: {
+			globals: globalsVars,
+			includesDir: '<%= sourceIncludes %>'
+		},
+
 		dev: {
-			options: {
-				globals: {
-					"meta-title": "<%= metaTitle %>",
-					"file-name": "<%= assetName %>"
-				},
-				includesDir: '<%= sourceIncludes %>'
-			},
 			files: [{
 				cwd: '<%= sourceHTML %>/',
 				src: ['**/*.html', '!_includes/*.html'],
@@ -25,13 +29,6 @@ module.exports = function (grunt) {
 		},
 
 		dist: {
-			options: {
-				globals: {
-					"meta-title": "<%= metaTitle %>",
-					"file-name": "<%= assetName %>"
-				},
-				includesDir: '<%= sourceIncludes %>'
-			},
 			files: [{
 				cwd: '<%= sourceHTML %>/',
 				src: ['**/*.html', '!_includes/*.html'],

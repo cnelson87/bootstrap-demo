@@ -1,4 +1,3 @@
-
 /**
  * sass
  * Compile Sass to CSS
@@ -16,7 +15,7 @@ module.exports = function (grunt) {
 				trace: true
 			},
 			files: [{
-				src: '<%= sourceStyles %>/styles.scss',
+				src: '<%= sourceStyles %>/app.scss',
 				dest: '<%= localStyles %>/<%= assetName %>.css'
 			}]
 		},
@@ -29,7 +28,7 @@ module.exports = function (grunt) {
 				trace: false
 			},
 			files: [{
-				src: '<%= sourceStyles %>/styles.scss',
+				src: '<%= sourceStyles %>/app.scss',
 				dest: '<%= publicStyles %>/<%= assetName %>.css'
 			}]
 		}

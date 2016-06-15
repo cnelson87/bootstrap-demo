@@ -1,4 +1,3 @@
-
 /**
  * jshint
  * Validate files with JSHint.
@@ -15,6 +14,8 @@ module.exports = function (grunt) {
 				'alert': true,
 				'console': true,
 				'document': true,
+				'export': true,
+				'import': true,
 				'module': true,
 				'require': true,
 				'window': true,
@@ -22,8 +23,17 @@ module.exports = function (grunt) {
 				'jQuery': true,
 				'$': true,
 				'_': true,
-				'Bootstrap': true,
-				'TweenMax': true
+				'Backbone': true,
+				'TweenMax': true,
+				'Linear': true,
+				'Back': true,
+				'Cubic': true,
+				'Quad': true,
+				'Quart': true,
+				'Quint': true,
+				'Bounce': true,
+				'Elastic': true,
+				'Application': true
 			}
 		},
 

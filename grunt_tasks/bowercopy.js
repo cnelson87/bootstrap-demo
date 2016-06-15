@@ -1,4 +1,3 @@
-
 /**
  * bowercopy
  * Scrupulously manage file locations for bower dependencies.
